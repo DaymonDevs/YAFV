@@ -191,11 +191,6 @@ android {
 
 var swigcmd = "swig"
 swigcmd = "C:\\Swig\\swig.exe"
-if (file("/opt/homebrew/bin/swig").exists())
-    swigcmd = "/opt/homebrew/bin/swig"
-else if (file("/usr/local/bin/swig").exists())
-    swigcmd = "/usr/local/bin/swig"
-
 
 fun registerGenTask(variantName: String, variantDirName: String): File {
     val baseDir = File(buildDir, "generated/source/ovpn3swig/${variantDirName}")
